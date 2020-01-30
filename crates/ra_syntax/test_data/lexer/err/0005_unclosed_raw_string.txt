@@ -1,0 +1,2 @@
+RAW_STRING 9 "r#\"hello\n"
+> error[0; 9) token("r#\"hello\n") msg(Missing trailing `"` with `#` symbols to terminate the raw string literal)

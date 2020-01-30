@@ -1,0 +1,2 @@
+STRING 7 "\"hello\n"
+> error[0; 7) token("\"hello\n") msg(Missing trailing `"` symbol to terminate the string literal)

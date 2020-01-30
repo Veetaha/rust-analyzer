@@ -71,10 +71,6 @@ impl SyntaxError {
 
         self
     }
-
-    pub fn debug_dump(&self, acc: &mut impl fmt::Write) {
-        writeln!(acc, "error {:?}: {}", self.location(), self.kind()).unwrap();
-    }
 }
 
 impl fmt::Display for SyntaxError {

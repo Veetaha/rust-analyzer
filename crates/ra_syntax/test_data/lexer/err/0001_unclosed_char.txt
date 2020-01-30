@@ -1,0 +1,13 @@
+CHAR 6 "\'   \n\'"
+WHITESPACE 2 "\t\n"
+CHAR 5 "\'\\0\n\'"
+ERROR 1 "\\"
+ERROR 1 "\\"
+WHITESPACE 1 "\n"
+CHAR 3 "\'\\n"
+WHITESPACE 1 "\n"
+COMMENT 193 "/*\nNote: be aware that unterminated character literal may be ambiguos with the lifetime token\n\nFIXME: there is something strange with unterminated char literals that contain only whitespace.\n*/"
+WHITESPACE 1 "\n"
+CHAR 1 "\'"
+> error[16; 19) token("\'\\n") msg(Missing trailing `'` symbol to terminate the character literal)
+> error[214; 215) token("\'") msg(Missing trailing `'` symbol to terminate the character literal)
