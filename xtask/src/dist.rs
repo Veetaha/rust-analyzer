@@ -47,6 +47,8 @@ fn dist_client(version: &str, release_tag: &str) -> Result<()> {
 }
 
 fn dist_server(nightly: bool) -> Result<()> {
+    std::env::set_var("RUSTFLAGS", "-Ccodegen-units=1");
+
     if cfg!(target_os = "linux") {
         std::env::set_var("CC", "clang");
         run!(
